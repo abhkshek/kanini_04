@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function recal() {
+            num1 = document.getElementById('firstnumber').value;
+            num2 = document.getElementById('secondnumber').value;
+            var output = document.getElementById('so').value;
+            if (output == 'add') {
+                document.getElementById('result').innerHTML = parseInt(num1) + parseInt(num2);
+            }
+            else if (output == 'subtract') {
+                document.getElementById('result').innerHTML = num1 - num2;
+            }
+            else if (output == 'multiply') {
+                document.getElementById('result').innerHTML = num1 * num2;
+            }
+            else { document.getElementById('result').innerHTML = num1 / num2; }
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            CALCULATOR
+            <table>
+                <tr>
+                    <td><img src="img/vector-calculator-icon.webp" width="250" height="250"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="input1">Input1</label></td>
+                    <td> <input type="number" name="input1" id="firstnumber" placeholder="Number"></td>
+                </tr>
+                <TR>
+                    <TD><label for="input2">Input2</label></TD>
+                    <td> <input type="number" name="input2" id="secondnumber" placeholder="Number"></td>
+                </TR>
+                <TR>
+                    <td>
+                        <label>selection operation</label>
+                        <select id="so">
+                            <option value="add">Add</option>
+                            <option value="subtract">subtract</option>
+                            <option value="multiply">multiply</option>
+                            <option value="divide">divide</option>
+                        </select>
+
+                    </td>
+                </TR>
+                <TR>
+                    <TD><input type="number" id="result"></TD>
+                </TR>
+                <tr>
+                    <!---<td><input type="button" onclick="recal()"></td>--->
+                    <td> <button><img src="img/reload-vector-icon.jpg " width="50" height="50"
+                                onclick="window.location.reload()"></button></td>
+                </tr>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+</body>
+
+</html>

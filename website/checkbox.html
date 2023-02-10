@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fetch(){
+            var selected_course="";
+            physics=document.getElementById("c1");
+            chemistry=document.getElementById("c2");
+            maths=document.getElementById("c3");
+
+
+            if(physics.checked==true)
+            {
+                selected_course+="physics";
+
+            }
+            if(chemistry.checked==true)
+            {
+                selected_course+="chemistry";
+            }
+            if(maths.checked==true)
+            {
+                selected_course+="maths";
+            }
+            document.getElementById("p1").innerHTML="you select" +selected_course;
+
+           
+        }
+    </script>
+</head>
+<body>
+    <form name="f1">
+        
+        <input type="checkbox" name="c1" value="physics" id="c1" >physics<br>
+        
+        
+        <input type="checkbox" name="c2" value="chemistry" id="c2">chemistry<br>
+        <input type="checkbox" name="c3" value="maths" id="c3">maths<br>
+        <input type="button" value="submit" onclick="fetch();">
+
+
+        
+    </form>
+    <p id="p1"></p>
+</body>
+</html>

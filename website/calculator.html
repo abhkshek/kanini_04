@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8 />
+    <title>JavaScript program to calculate multiplication and division of two numbers </title>
+    <style type="text/css">
+        body {
+            margin: 30px;
+        }
+    </style>
+    <script>
+
+        function operationBy() {
+            num1 = document.getElementById("firstNumber").value;
+            num2 = document.getElementById("secondNumber").value;
+            var output = document.getElementById('so').value;
+            if (output == 'Addition') {
+                document.getElementById("result").innerHTML = parseInt(num1) + parseInt(num2);
+            }
+            else if (output == 'Subtract') {
+                document.getElementById("result").innerHTML = num1 - num2;
+            }
+            else if (output == 'Multiply') {
+                document.getElementById("result").innerHTML = num1 * num2;
+            }
+            else {
+                document.getElementById("result").innerHTML = num1 / num2;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Cal</legend>
+        <form>
+            <img src="img/vector-calculator-icon.webp" width="150" height="150">
+            <br><br>
+            1st Number : <input type="text" id="firstNumber" /><br>
+            <br>
+            2nd Number: <input type="text" id="secondNumber" /><br>
+            <br>
+            <select name="" id="so">
+                <option value="Addition">+</option>
+                <option value="Subtract">-</option>
+                <option value="Multiply">*</option>
+                <option value="Divide">/</option>
+            </select>
+            <br><br>
+            <input type="button" onClick="operationBy()" Value="Operation" />
+        </form>
+        <br><br>
+        <img src="img/reload-vector-icon.jpg" alt="" style="width: 100px;" onclick="window.location.reload()">
+        <p>The Result is : <br>
+            <span id="result"></span>
+        </p>
+    </fieldset>
+</body>
+
+</html>
