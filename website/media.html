@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <style>
+        @media screen and (min-width:400px) and (max-width:900px) { 
+            .a{
+             color: aqua;
+             font-family: "sofia";
+             
+            }
+            
+        }
+        @media screen and (min-width:500px) and (max-width:800px){
+            .b{
+                color: red;
+                
+            }
+            
+        }
+        @media screen and (min-width:600px) and (max-width:700px){
+            .c{
+                
+                color: blue;
+            }
+        }
+        @media screen and (min-width:700px) and (max-width:1000px){
+            .d{
+                
+                color: yellow;
+            }
+        }
+        @media print{
+            .a{
+                font-family: "sofia";
+                color: black;
+            }
+          
+        }
+       
+
+        .a::first-letter{
+                font-size: 100px;
+            }
+            .a::after{
+                content: url('img/d.jpg');
+            }
+            .c::before{
+                content: url('img/d.jpg');
+            }
+            .d::before{
+                content: ;
+            }
+    </style>
+</head>
+<body>
+    <p class="a">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut debitis, culpa nemo eius architecto eligendi! Laborum nemo dolores voluptatibus commodi laudantium? Nam accusantium beatae quia quibusdam blanditiis ullam inventore aspernatur?</p>
+<p class="b">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, maiores ea, omnis sunt modi hic voluptatum corporis debitis nobis ullam magnam repellendus eaque error recusandae illum aperiam quidem, vero rerum!</p> 
+<p class="c">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora vel cumque fuga odio sequi totam ut quas consequuntur tempore dicta adipisci nostrum quis dolor commodi ipsa minima, laudantium, ratione unde!</p>
+<p class="d">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint delectus voluptatum et in fuga veniam mollitia consectetur accusamus nisi corrupti laborum ipsa, soluta animi aspernatur tenetur culpa natus? Sapiente, consequatur!</p>
+</body>
+</html>
